@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Rowdies:wght@300;400;700&display=swap');
+
+body {
+    font-size: 20px;
+
+    /* We can change the font family. */
+    font-family: "Noto Serif", serif;
+}
+
+main {
+    /* width:750px; */
+    max-width:750px;
+    margin: 0 auto;
+}
+
+h1 {
+    color: magenta;
+
+    /* We can set the background to a solid colour, a gradient, or even images. */
+    background: url("../images/frog.jpg");
+
+    /* If setting an image or a gradient, we can position it with background position. If we want to specify different values for the X and Y axes, we can provide two values */
+    background-position: center;
+
+    /* Same with background size. % value is proportional to the container's dimensions */
+    background-size: 25%;
+
+    /* By default background images tile. We can disable that on one or both axes. */
+    /* background-repeat: no-repeat; */
+
+    font-size: 3em;
+    font-family: "Rowdies", sans-serif;
+
+    /* Font Weight is the thickness of the font. Options are determined by the font you choose but range from 100-900, with 400 being regular, and 700 being bold */
+    font-weight: 300;
+
+    /* We can align text (and other inline elements) to the left, center or right. */
+    text-align: center;
+}
+
+
+/* Order of operations is important - more recent rules override older rules if the selectors are the same. */
+p {
+    color: white;
+}
+p {
+    /* background-color: darkorchid; */
+    color: #111;
+
+    /* Margin can be applied to push the element away from other elements. On paragraphs, applying margin-bottom creates space the text. */
+    margin-bottom: 40px;
+}
+
+/* Targetting by class - more specific than tags and override them if there's a conflict. */
+/* Classes are prefixed with . */
+.highlighted {
+    background-color: yellow;
+
+    margin: 40px;
+    
+    /* We can specify margin and padding for individual sides or as a whole */
+    
+    /* padding-bottom: 50px; */
+
+    /* For the shorthand, one number is all sides, two numbers is top/bottom + left/right, three is top + sides + bottom, and four is all sides (specified in order, clockwise)  */
+    padding: 25px;
+    /* padding: 25px 50px;
+    padding: 25px 50px 100px;
+    padding: 25px 50px 100px 10px; */
+
+    /* For borders, we can specify the border on all sides with the shorthand - thickness, style, colour */
+    border: 5px solid red;
+
+    /* We can override spicific sides, or specific properties for the whole */
+    border-bottom: 10px dashed green;
+    /* border-color: blue; */
+
+    /* We can specify a border radius to add a curve to the corners of an element. */
+    border-radius: 40px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+
+}
+/* Compound selectors are more specific */
+p.highlighted {
+    background-color: yellow;
+}
+
+/* Targetting by id - more specific than classes and tags */
+/* Classes are prefixed with # */
+#important {
+    background-color: darkred;
+
+    /* Doesn't necessarily respect padding on the container!*/
+    /* width: 100%; */
+}
+
+.box {
+    padding: 20px;
+     background-color: #333;
+}
+
+.bar1 {
+    height: 50px;
+    background-color: blue;
+    width: 50%;
+}
+.bar2 {
+    height: 50px;
+    background-color: red;
+    width: 50vw;
+}
+.bar3 {
+    height: 50px;
+    background-color: gold;
+    width: 50vh;
+}
+
+section {
+    background: darkkhaki;
+    min-height: 100vh;
+    
+    padding: 25px;
+}
+h2 {
+    text-align: center;
+    margin-top: 40%;
+}
