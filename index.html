@@ -10,7 +10,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"> -->
 
     <!-- External styles, best way to include styles -->
+    <!-- Reset the styles across browsers. -->
+    <!-- https://www.joshwcomeau.com/css/custom-css-reset/ -->
     <link rel="stylesheet" href="css/reset.css">
+    <!-- inlcude our own styles (preferred way of including css) -->
     <link rel="stylesheet" href="css/styles.css">
 
     <!-- Internal styles, not preferred -->
@@ -27,14 +30,16 @@
     </header>
     <main>
         <section>
-            <!-- Inline styles, not preferred -->
+            <!-- Inline styles, not preferred. Easy way to directly apply CSS, but it can get messy if we rely on it. It will also override any styles we link from elsewhere. -->
             <p style="color: green;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro tempora asperiores quisquam magni fugiat blanditiis hic totam expedita corrupti amet accusantium eligendi libero provident, fuga itaque deserunt ea dolorem! Blanditiis.</p>
 
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat accusamus enim culpa ducimus minus quis beatae eius quibusdam officia, qui animi totam temporibus rem dicta magni ut pariatur. Qui, error?</p>
+            <!-- CSS is most commonly applied to a 'class' which in turn is placed on HTML elements you want to style. -->
             <p class="highlighted">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat accusamus enim culpa ducimus minus quis beatae eius quibusdam officia, qui animi totam temporibus rem dicta magni ut pariatur. Qui, error?</p>
+            <!-- CSS can also be applied to elements by targetting their id, but as ids are unique, this is not prefered. -->
             <p id="important" class="highlighted">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat accusamus enim culpa ducimus minus quis beatae eius quibusdam officia, qui animi totam temporibus rem dicta magni ut pariatur. Qui, error?</p>
+            
             <h2>Hello again</h2>
-
             <div class="box">
                 <div class="bar1"></div>
                 <div class="bar2"></div>
