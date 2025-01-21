@@ -1,15 +1,22 @@
+/* We can also link fonts using an @import command */
+/* There's not much difference between linking fonts here or in the HTML. It's mostly a matter of preference. */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Rowdies:wght@300;400;700&display=swap');
 
 body {
+    /* We can set the size of text on the page. This value is referenced by other elements like <p> and <h1> tags, so it will scale all the text. */
     font-size: 20px;
 
-    /* We can change the font family. */
+    /* We can change the font family to use a custom font. */
+    /* We usually provide at least one fallback font in case it fails to load. This very rare, but still it's a good idea to include a fallback. We can just put serif as any serif font will be close enough to the one we chose here. */
     font-family: "Noto Serif", serif;
 }
 
 main {
+    /* We can set the width of block type elements if we want to constrain them. However, on smaller screens, this can overflow off the right hand side of the page. */
     /* width:750px; */
-    max-width:750px;
+    /* If we instead set a max-width, then the element will shrink if the container is too small. This is generally preferred. */
+    max-width:750px;    
+    /* If we've set the width or max-width on an element, then we can give it automatic margins to center it (horizontally) in the middle of the page. This only works on block elements. */
     margin: 0 auto;
 }
 
@@ -17,6 +24,7 @@ h1 {
     color: magenta;
 
     /* We can set the background to a solid colour, a gradient, or even images. */
+    /* If setting to an image, be aware that the filepath starts in the css folder. Use ../ to go up a level. */
     background: url("../images/frog.jpg");
 
     /* If setting an image or a gradient, we can position it with background position. If we want to specify different values for the X and Y axes, we can provide two values */
@@ -28,10 +36,13 @@ h1 {
     /* By default background images tile. We can disable that on one or both axes. */
     /* background-repeat: no-repeat; */
 
+    /* we can set the font size of headings using px, but that isn't ideal as it won't scale with the base font size of the page. */
+
+    /* em units are multiples of the default font size of the element. So if the base font size is 20px, then 3em is 60px. If the base font size would change and we're using ems, then the font size will automatically resize. */    
     font-size: 3em;
     font-family: "Rowdies", sans-serif;
 
-    /* Font Weight is the thickness of the font. Options are determined by the font you choose but range from 100-900, with 400 being regular, and 700 being bold */
+    /* Font weight is the thickness of the font. Options are determined by the font you choose but range from 100-900, with 400 being regular, and 700 being bold */
     font-weight: 300;
 
     /* We can align text (and other inline elements) to the left, center or right. */
@@ -71,7 +82,7 @@ p {
     /* For borders, we can specify the border on all sides with the shorthand - thickness, style, colour */
     border: 5px solid red;
 
-    /* We can override spicific sides, or specific properties for the whole */
+    /* We can override specific sides, or specific properties for the whole */
     border-bottom: 10px dashed green;
     /* border-color: blue; */
 
@@ -81,7 +92,7 @@ p {
     border-bottom-left-radius: 5px;
 
 }
-/* Compound selectors are more specific */
+/* Compound selectors are more specific than targeting just by class or tag. More */
 p.highlighted {
     background-color: yellow;
 }
@@ -103,16 +114,20 @@ p.highlighted {
 .bar1 {
     height: 50px;
     background-color: blue;
+    
+    /* use % to create a vaule proportional to the container it's in */
     width: 50%;
 }
 .bar2 {
     height: 50px;
     background-color: red;
+    /* vw is viewport-width. Units are percent of the size of the viewport*/
     width: 50vw;
 }
 .bar3 {
     height: 50px;
     background-color: gold;
+    /* vh is viewport-height. Units are percent of the size of the viewport*/
     width: 50vh;
 }
 
